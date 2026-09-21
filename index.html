@@ -258,7 +258,7 @@ function startCam(){
 
   var v=document.getElementById('camVideo');
 
-  navigator.mediaDevices.getUserMedia({video:true,audio:false})
+  navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'}},audio:false})
     .then(function(stream){
       camStream=stream;
       v.srcObject=stream;
